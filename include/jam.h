@@ -15,6 +15,7 @@
     #include <SFML/Graphics.h>
 
 int main_menu(void);
+void settings_menu(void);
 
 void check_close(window win);
 

@@ -7,28 +7,31 @@
 
 #include "jam.h"
 
+void init_window(int w, int h, int other, all *opti)
+{
+    sfVideoMode mode = {w, h, other};
+    opti->settings.window.window = sfRenderWindow_create(mode, "Menu Settings", sfResize | sfClose, NULL);
+}
+
 // settings main_menu -> settings or Pause -> settings or reverse
 void settings_menu(void)
 {
-    sfVideoMode mode = {1920, 1080, 32};
-    sfRenderWindow* window;
+    all opti;
+    init_window(1920, 1080, 32, &opti);
     sfTexture* texture;
     sfSprite* sprite;
-    sfEvent event;
-    window = sfRenderWindow_create(mode, "Menu Settings", sfResize | sfClose, NULL);
-
-    while (sfRenderWindow_isOpen(window))
+    while (sfRenderWindow_isOpen(opti.settings.window.window))
     {
     
-        while (sfRenderWindow_pollEvent(window, &event)) {
-            if (event.type == sfEvtClosed)
-                sfRenderWindow_close(window);
+        while (sfRenderWindow_pollEvent(opti.settings.window.window, &opti.settings.window.event)) {
+            if (opti.settings.window.event.type == sfEvtClosed)
+                sfRenderWindow_close(opti.settings.window.window);
         }
         
-        sfRenderWindow_clear(window, sfBlack);
+        sfRenderWindow_clear(opti.settings.window.window, sfWhite);
         
         //sfRenderWindow_drawSprite(window, sprite, NULL);
         
-        sfRenderWindow_display(window);
+        sfRenderWindow_display(opti.settings.window.window);
     }
 }
