@@ -7,8 +7,6 @@
 
 #include "jam.h"
 
-#include <SFML/Graphics.h>
-
 void check_close(window win)
 {
     while (sfRenderWindow_pollEvent(win.window, &win.event)) {
