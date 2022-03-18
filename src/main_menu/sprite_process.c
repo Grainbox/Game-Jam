@@ -12,7 +12,7 @@ window start_button(window window)
     sfTexture *texture = NULL;
     sfSprite *sprite = sfSprite_create();
     sfVector2f scale = {10, 10};
-    sfVector2f pos = { 230, 100 };
+    sfVector2f pos = { 265, 400 };
 
     texture = sfTexture_createFromFile("./content/start-button.png", NULL);
     sfSprite_setTexture(sprite, texture, sfTrue);
