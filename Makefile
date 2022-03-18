@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC	=	src/main.c
+SRC	=	src/main.c	\
+		src/main/main_window.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -19,7 +20,7 @@ all:	$(NAME)
 
 $(NAME):	$(OBJ)
 	make -C lib/my/
-	gcc -o $(NAME) $(OBJ) $(CSFML) -L lib/my -lmy
+	gcc -o $(NAME) $(OBJ) -L lib/my -lmy $(CSFML)
 
 clean:
 	rm -f $(OBJ)
