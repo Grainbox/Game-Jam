@@ -5,15 +5,19 @@
 ## Makefile
 ##
 
-SRC	=	src/main.c									\
-		src/main_menu/main_window.c					\
-		src/main_menu/check_event.c					\
-		src/settings_menu/settings.c 				\
-		src/main_menu/sprite_process.c
+SRC	=	src/main.c
 
-OBJ = $(SRC:.c=.o)
+MAIN_MENU	=	src/main_menu/main_window.c	\
+				src/main_menu/check_event.c	\
+				src/main_menu/sprite_process.c
 
-NAME = jam
+SETTINGS_MENU	=	src/settings_menu/settings.c
+
+FINAL_SRC	=	$(SRC)	$(MAIN_MENU)	$(SETTINGS_MENU)
+
+OBJ = $(FINAL_SRC:.c=.o)
+
+NAME = keeper
 
 CFLAGS	+= -Wall -Wextra -W -I include -g
 

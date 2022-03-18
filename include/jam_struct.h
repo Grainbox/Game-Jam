@@ -12,7 +12,7 @@
 
     #include <SFML/Graphics.h>
 
-struct window {
+struct main_menu {
     sfVideoMode mode;
     sfRenderWindow *window;
     sfEvent event;
@@ -21,11 +21,7 @@ struct window {
     sfSprite *sprite3;
     sfSprite *sprite4;
 };
-typedef struct window window;
-
-
-
-
+typedef struct main_menu main_menu;
 
 struct window_init {
     sfRenderWindow* window;

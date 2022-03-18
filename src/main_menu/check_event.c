@@ -7,7 +7,7 @@
 
 #include "jam.h"
 
-void check_close(window win)
+void check_close(main_menu win)
 {
     while (sfRenderWindow_pollEvent(win.window, &win.event)) {
         if (win.event.type == sfEvtClosed)

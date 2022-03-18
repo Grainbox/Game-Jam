@@ -22,16 +22,15 @@ void settings_menu(void)
     sfSprite* sprite;
     while (sfRenderWindow_isOpen(opti.settings.window.window))
     {
-    
         while (sfRenderWindow_pollEvent(opti.settings.window.window, &opti.settings.window.event)) {
             if (opti.settings.window.event.type == sfEvtClosed)
                 sfRenderWindow_close(opti.settings.window.window);
         }
-        
+
         sfRenderWindow_clear(opti.settings.window.window, sfWhite);
-        
+
         //sfRenderWindow_drawSprite(window, sprite, NULL);
-        
+
         sfRenderWindow_display(opti.settings.window.window);
     }
 }
