@@ -14,6 +14,8 @@
 
     #include <SFML/Graphics.h>
 
-window create_window(void);
+int main_menu(void);
+
+void check_close(window win);
 
 #endif /* !JAM_H_ */

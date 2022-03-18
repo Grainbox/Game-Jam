@@ -6,7 +6,8 @@
 ##
 
 SRC	=	src/main.c	\
-		src/main/main_window.c
+		src/main_menu/main_window.c	\
+		src/main_menu/check_event.c
 
 OBJ = $(SRC:.c=.o)
 
