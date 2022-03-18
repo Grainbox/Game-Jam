@@ -16,6 +16,10 @@ struct window {
     sfVideoMode mode;
     sfRenderWindow *window;
     sfEvent event;
+    sfSprite *sprite1;
+    sfSprite *sprite2;
+    sfSprite *sprite3;
+    sfSprite *sprite4;
 };
 typedef struct window window;
 
