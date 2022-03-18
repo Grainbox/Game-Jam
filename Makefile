@@ -9,7 +9,6 @@ SRC	=	src/main.c									\
 		src/main_menu/main_window.c					\
 		src/main_menu/check_event.c					\
 		src/settings_menu/settings.c 				\
-		src/main_menu/check_event.c					\
 		src/main_menu/sprite_process.c
 
 OBJ = $(SRC:.c=.o)
