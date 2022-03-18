@@ -16,10 +16,12 @@
 
     #define SCALE 800, 1010, 60
 
-int main_menu(void);
+int open_main_menu(void);
 
-void check_close(window win);
+void settings_menu(void);
 
-window start_button(window window);
+void check_close(main_menu win);
+
+main_menu start_button(main_menu window);
 
 #endif /* !JAM_H_ */

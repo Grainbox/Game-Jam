@@ -29,6 +29,9 @@ $(NAME):	$(OBJ)
 	make -C lib/my/
 	gcc -o $(NAME) $(OBJ) -L lib/my -lmy $(CSFML)
 
+apple:  $(OBJ)
+		/usr/bin/arch -x86_64 gcc $(SRC) -o $(NAME) -I../includes $(CFLAGS) $(CSFML)
+
 clean:
 	rm -f $(OBJ)
 	rm -f *~

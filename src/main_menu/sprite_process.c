@@ -7,7 +7,7 @@
 
 #include "jam.h"
 
-window start_button(window window)
+main_menu start_button(main_menu window)
 {
     sfTexture *texture = NULL;
     sfSprite *sprite = sfSprite_create();
