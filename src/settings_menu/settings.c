@@ -17,7 +17,7 @@ void init_window(int w, int h, int other, all *opti)
 void settings_menu(void)
 {
     all opti;
-    init_window(1920, 1080, 32, &opti);
+    init_window(SCALE, &opti);
     sfTexture* texture;
     sfSprite* sprite;
     while (sfRenderWindow_isOpen(opti.settings.window.window))
