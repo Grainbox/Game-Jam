@@ -31,8 +31,20 @@ struct window_init {
 };
 typedef struct window_init window_init;
 
+struct image {
+    sfSprite *sprite;
+    sfTexture *texture;
+    int x;
+    int y;
+    int size_x;
+    int size_y;
+    int rotate;
+};
+typedef struct image image;
+
 struct setting_menu {
     window_init window;
+    image *img;
 };
 typedef struct setting_menu setting_menu;
 
