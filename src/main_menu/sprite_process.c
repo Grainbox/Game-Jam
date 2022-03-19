@@ -7,6 +7,7 @@
 
 #include "jam.h"
 
+// create setting_button sprite
 main_menu settings_button(main_menu window)
 {
     sfTexture *texture = NULL;
@@ -22,6 +23,7 @@ main_menu settings_button(main_menu window)
     return window;
 }
 
+// create start_button sprite
 main_menu start_button(main_menu window)
 {
     sfTexture *texture = NULL;

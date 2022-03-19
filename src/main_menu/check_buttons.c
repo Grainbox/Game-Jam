@@ -7,6 +7,7 @@
 
 #include "jam.h"
 
+// check if start_button is cliqued
 int check_start_button(main_menu window)
 {
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);
@@ -18,6 +19,7 @@ int check_start_button(main_menu window)
     return false;
 }
 
+// check if settings_button is cliqued
 int check_settings_button(main_menu window)
 {
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);

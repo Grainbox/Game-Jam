@@ -10,6 +10,5 @@
 int main(void)
 {
     open_main_menu();
-    //settings_menu();
     return OK;
 }

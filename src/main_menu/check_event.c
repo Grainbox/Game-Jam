@@ -7,6 +7,7 @@
 
 #include "jam.h"
 
+// analyze received event
 void analyze_event(int event)
 {
     if (event == 1) {}
@@ -15,6 +16,7 @@ void analyze_event(int event)
         settings_menu();
 }
 
+// check for any event
 void check_event(main_menu win, int *event)
 {
     while (sfRenderWindow_pollEvent(win.window, &win.event)) {
