@@ -13,7 +13,7 @@
     #include <SFML/Graphics.h>
     #include <SFML/Audio/Music.h>
 
-struct main_menu {
+struct window {
     sfVideoMode mode;
     sfRenderWindow *window;
     sfEvent event;
@@ -21,8 +21,9 @@ struct main_menu {
     sfSprite *sprite2;
     sfSprite *sprite3;
     sfSprite *sprite4;
+    int playing;
 };
-typedef struct main_menu main_menu;
+typedef struct window window;
 
 // settings ::::::::::::::::::::::
 

@@ -25,25 +25,31 @@
 
     #define TITLE "Donovan The Building Keeper"
 
-int open_main_menu(void);
+void open_main_menu(void);
 
 void settings_menu(void);
 
-void check_event(main_menu win, int *event);
+void check_main_event(window win, int *event);
 
 void analyze_event(int event);
 
-main_menu start_button(main_menu window);
+window start_button(window window);
 
-int check_start_button(main_menu window);
+int check_start_button(window window);
 
-main_menu settings_button(main_menu window);
+window settings_button(window window);
 
-int check_settings_button(main_menu window);
+int check_settings_button(window window);
 
-main_menu exit_button(main_menu window);
+window exit_button(window window);
 
-int check_exit_button(main_menu window);
+int check_exit_button(window window);
+
+window game_background(window window);
+
+void check_game_event(window win, int *event);
+
+void open_game_window(void);
 
 void init_window(int w, int h, int other, all *opti);
 

@@ -11,13 +11,13 @@
 void analyze_event(int event)
 {
     if (event == 1) {}
-        //start_game
+        open_game_window();
     if (event == 2)
         settings_menu();
 }
 
 // check for any event
-void check_event(main_menu win, int *event)
+void check_main_event(window win, int *event)
 {
     while (sfRenderWindow_pollEvent(win.window, &win.event)) {
         if (win.event.type == sfEvtClosed)
