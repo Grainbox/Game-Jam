@@ -95,5 +95,7 @@ void init(GLOBAL);
 
 window background_main(window window);
 
+void define_background(all *opti);
+
 
 #endif /* !JAM_H_ */

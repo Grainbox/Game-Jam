@@ -70,3 +70,17 @@ void change_level_son(all *opti)
         printf("%d\n", MSC_LV);
     }
 }
+
+void define_background(all *opti)
+{
+    int x = 0;
+    int y = 0;
+    int i = 4;
+    sfVector2f size = {1, 1};
+    sfVector2f pos = {x, y};
+    opti->settings.img[i].sprite = sfSprite_create();
+    SET_P(opti->settings.img[i].sprite, pos);
+    sfSprite_setScale(opti->settings.img[i].sprite, size);
+    opti->settings.img[i].texture = CREA_FILE("./content/font_settings.png", NULL);
+    SET_T(opti->settings.img[i].sprite, opti->settings.img[i].texture, sfTrue);
+}
