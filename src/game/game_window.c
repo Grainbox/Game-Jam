@@ -13,7 +13,7 @@ static window create_window(void)
     char t[] = TITLE;
     sfRenderWindow *w = sfRenderWindow_create(m, t, sfClose, NULL);
     sfEvent event;
-    window screen = {m, w, event, NULL, NULL, NULL, NULL};
+    window screen = {m, w, event, NULL, NULL, NULL, NULL, 1};
 
     screen = game_background(screen);
     sfRenderWindow_setFramerateLimit(screen.window, 60);
@@ -35,6 +35,8 @@ void open_game_window(void)
     while (sfRenderWindow_isOpen(window.window)) {
         check_game_event(window, &event);
         write_window(window);
+        if (event == 1)
+            break;
     }
     sfRenderWindow_destroy(window.window);
 }
