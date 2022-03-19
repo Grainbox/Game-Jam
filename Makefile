@@ -8,7 +8,7 @@
 SRC	=	./src/main.c									\
 		./src/main_menu/main_window.c					\
 		./src/main_menu/check_event.c					\
-		./src/main_menu/start_button.c					\
+		./src/main_menu/check_buttons.c					\
 		./src/main_menu/sprite_process.c 				\
 		./src/settings_menu/settings.c					\
 
