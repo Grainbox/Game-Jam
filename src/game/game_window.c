@@ -13,9 +13,10 @@ static window create_window(void)
     char t[] = TITLE;
     sfRenderWindow *w = sfRenderWindow_create(m, t, sfClose, NULL);
     sfEvent event;
-    window screen = {m, w, event, NULL, NULL, NULL, NULL, 1};
+    window screen = {m, w, event, NULL, NULL, NULL, NULL, NULL, 0};
 
     screen = game_background(screen);
+    screen = break_background(screen);
     sfRenderWindow_setFramerateLimit(screen.window, 60);
     return screen;
 }

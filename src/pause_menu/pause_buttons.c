@@ -7,23 +7,22 @@
 
 #include "jam.h"
 
-void return_button(sfRenderWindow *menu_pause)
+void resume_button(window *window, int *playing)
 {
-    sfVector2i pos_pause = sfMouse_getPositionRenderWindow(menu_pause);
-    printf("%d ; %d\n", pos_pause.x, pos_pause.y);
+    sfVector2i pos_pause = sfMouse_getPositionRenderWindow(window->window);
     if (pos_pause.x >= 750 && pos_pause.x <= 1130) {
-        if (pos_pause.y >= 490 && pos_pause.y <= 555)
-            sfRenderWindow_close(menu_pause);
+        if (pos_pause.y >= 490 && pos_pause.y <= 555) {
+            display_break(&window);
+            *playing = 1;
+        }
     }
 }
 
-void exit_pause(sfRenderWindow *menu_pause, sfRenderWindow *window)
+void exit_game(sfRenderWindow *menu_pause, sfRenderWindow *window)
 {
     sfVector2i pos_pause = sfMouse_getPositionRenderWindow(menu_pause);
-    printf("%d ; %d\n", pos_pause.x, pos_pause.y);
     if (pos_pause.x >= 670 && pos_pause.x <= 1225) {
         if (pos_pause.y >= 655 && pos_pause.y <= 745) {
-            sfRenderWindow_close(menu_pause);
             sfRenderWindow_close(window);
         }
     }
@@ -32,7 +31,6 @@ void exit_pause(sfRenderWindow *menu_pause, sfRenderWindow *window)
 void buttons_pause(sfRenderWindow *menu_pause, sfRenderWindow *window)
 {
     sfVector2i pos_pause = sfMouse_getPositionRenderWindow(menu_pause);
-    printf("%d ; %d\n", pos_pause.x, pos_pause.y);
     if (pos_pause.x >= 750 && pos_pause.x <= 1130) {
         if (pos_pause.y > 490 && pos_pause.y < 555)
             return_button(menu_pause);

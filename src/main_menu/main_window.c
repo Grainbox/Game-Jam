@@ -14,7 +14,7 @@ static window create_window(void)
     char t[] = TITLE;
     sfRenderWindow *w = sfRenderWindow_create(m, t, sfClose, NULL);
     sfEvent event;
-    window screen = {m, w, event, NULL, NULL, NULL, NULL};
+    window screen = {m, w, event, NULL, NULL, NULL, NULL, NULL, 0};
 
     screen = start_button(screen);
     screen = settings_button(screen);

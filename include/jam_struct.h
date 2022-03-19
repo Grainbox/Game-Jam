@@ -23,7 +23,7 @@ struct window {
     sfSprite *sprite2;
     sfSprite *sprite3;
     sfSprite *sprite4;
-    int playing;
+    sfSprite *sprite5;
 };
 typedef struct window window;
 

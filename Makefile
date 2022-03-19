@@ -17,6 +17,7 @@ SRC	=	./src/main.c									\
 		./src/game/check_event.c						\
 		./src/game/game_window.c						\
 		./src/game/sprite_process.c						\
+		./src/pause_menu/display_break.c				\
 
 OBJ = $(SRC:.c=.o)
 
@@ -24,7 +25,7 @@ NAME = keeper
 
 CFLAGS	+= -Wall -Wextra -W -I include -g
 
-CSFML	=	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-Audio 
+CSFML	=	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 all:	$(NAME)
 
