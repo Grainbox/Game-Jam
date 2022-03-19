@@ -34,7 +34,7 @@ static void write_window(window window)
 }
 
 // window loop
-void open_main_menu(void)
+void open_main_menu(GLOBAL)
 {
     window window = create_window();
     int event = 0;
@@ -46,5 +46,5 @@ void open_main_menu(void)
             break;
     }
     sfRenderWindow_destroy(window.window);
-    analyze_event(event);
+    analyze_event(event, opti);
 }

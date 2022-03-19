@@ -24,7 +24,7 @@ void button_back(all *opti)
 {
     int x = 50;
     int y = 900;
-    sfVector2f size = {3 ,3};
+    sfVector2f size = {8 ,8};
     sfVector2f pos = {x, y};
     opti->settings.img[3].sprite = sfSprite_create();
     SET_P(opti->settings.img[3].sprite, pos);
@@ -48,7 +48,8 @@ void define_play_song(all *opti)
 
 void define_front_img(all *opti)
 {
-    int x = 225;
+    int x = ((opti->settings.msc.level * 450) + 150) / 100;
+    printf("%d", x);
     int y = 490;
     sfVector2f size = {0.1 ,0.6};
     sfVector2f pos = {x, y};

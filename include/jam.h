@@ -25,7 +25,7 @@
 
     #define TITLE "Donovan The Building Keeper"
 
-    #define WINDOW opti.settings.window.window
+    #define WINDOW opti->settings.window.window
 
     #define MSC_LV opti->settings.msc.level
 
@@ -35,15 +35,17 @@
 
     #define SET_P sfSprite_setPosition
 
-     #define SET_T sfSprite_setTexture
+    #define SET_T sfSprite_setTexture
 
-void open_main_menu(void);
+    #define GLOBAL all *opti
 
-void settings_menu(void);
+void open_main_menu(GLOBAL);
+
+void settings_menu(GLOBAL);
 
 void check_main_event(window win, int *event);
 
-void analyze_event(int event);
+void analyze_event(int event, GLOBAL);
 
 window start_button(window window);
 
@@ -69,25 +71,27 @@ window break_background(window window);
 
 int display_break(window *window);
 
-void init_window(int w, int h, int other, all *opti);
+void init_window(int w, int h, int other, GLOBAL);
 
-void init_song(all *opti);
+void init_song(GLOBAL);
 
-void init_img(all *opti);
+void init_img(GLOBAL);
 
-void define_back_img(all *opti);
+void define_back_img(GLOBAL);
 
-void define_play_song(all *opti);
+void define_play_song(GLOBAL);
 
-void define_front_img(all *opti);
+void define_front_img(GLOBAL);
 
-void change_level_son(all *opti);
+void change_level_son(GLOBAL);
 
-void button_song(all *opti);
+void button_song(GLOBAL);
 
-void check_pos(all *opti);
+void check_pos(GLOBAL);
 
-void button_back(all *opti);
+void button_back(GLOBAL);
+
+void init(GLOBAL);
 
 
 #endif /* !JAM_H_ */

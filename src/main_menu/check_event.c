@@ -8,12 +8,12 @@
 #include "jam.h"
 
 // analyze received event
-void analyze_event(int event)
+void analyze_event(int event, GLOBAL)
 {
     if (event == 1)
         open_game_window();
     if (event == 2)
-        settings_menu();
+        settings_menu(opti);
 }
 
 // check for any event
