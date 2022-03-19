@@ -8,7 +8,7 @@
 #include "jam.h"
 
 // create exit_button sprite
-main_menu exit_button(main_menu window)
+window exit_button(window window)
 {
     sfTexture *texture = NULL;
     sfSprite *sprite = sfSprite_create();
@@ -24,7 +24,7 @@ main_menu exit_button(main_menu window)
 }
 
 // create setting_button sprite
-main_menu settings_button(main_menu window)
+window settings_button(window window)
 {
     sfTexture *texture = NULL;
     sfSprite *sprite = sfSprite_create();
@@ -40,7 +40,7 @@ main_menu settings_button(main_menu window)
 }
 
 // create start_button sprite
-main_menu start_button(main_menu window)
+window start_button(window window)
 {
     sfTexture *texture = NULL;
     sfSprite *sprite = sfSprite_create();

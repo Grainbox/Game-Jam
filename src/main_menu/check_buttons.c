@@ -8,7 +8,7 @@
 #include "jam.h"
 
 // check if exit_button is cliqued
-int check_exit_button(main_menu window)
+int check_exit_button(window window)
 {
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);
     sfBool event = sfMouse_isButtonPressed(sfMouseLeft);
@@ -20,7 +20,7 @@ int check_exit_button(main_menu window)
 }
 
 // check if start_button is cliqued
-int check_start_button(main_menu window)
+int check_start_button(window window)
 {
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);
     sfBool event = sfMouse_isButtonPressed(sfMouseLeft);
@@ -32,7 +32,7 @@ int check_start_button(main_menu window)
 }
 
 // check if settings_button is cliqued
-int check_settings_button(main_menu window)
+int check_settings_button(window window)
 {
     sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);
     sfBool event = sfMouse_isButtonPressed(sfMouseLeft);
