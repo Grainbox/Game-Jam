@@ -30,11 +30,15 @@ void write_window(main_menu window)
 int open_main_menu(void)
 {
     main_menu window = create_window();
+    int event = 0;
 
     while (sfRenderWindow_isOpen(window.window)) {
         write_window(window);
-        check_close(window);
+        check_event(window, &event);
+        if (event != 0)
+            break;
     }
     sfRenderWindow_destroy(window.window);
+    analyze_event(event);
     return OK;
 }
