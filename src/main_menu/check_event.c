@@ -9,7 +9,7 @@
 
 void analyze_event(int event)
 {
-    if (event == 1);
+    if (event == 1) {}
         //start_game
 }
 
