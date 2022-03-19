@@ -16,6 +16,7 @@
     #include <SFML/System.h>
 
     #include <stdbool.h>
+    #include <unistd.h>
 
     #define SCALE 800, 1010, 60
 

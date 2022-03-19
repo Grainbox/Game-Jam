@@ -30,7 +30,7 @@ void settings_menu(void)
 
         sfRenderWindow_clear(opti.settings.window.window, sfWhite);
 
-        //sfRenderWindow_drawSprite(window, sprite, NULL);
+        // sfRenderWindow_drawSprite(window, sprite, NULL);
 
         sfRenderWindow_display(opti.settings.window.window);
     }

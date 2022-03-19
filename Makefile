@@ -8,6 +8,7 @@
 SRC	=	./src/main.c									\
 		./src/main_menu/main_window.c					\
 		./src/main_menu/check_event.c					\
+		./src/main_menu/start_button.c					\
 		./src/main_menu/sprite_process.c 				\
 		./src/settings_menu/settings.c					\
 
@@ -26,7 +27,7 @@ $(NAME):	$(OBJ)
 	gcc -o $(NAME) $(OBJ) -L lib/my -lmy $(CSFML)
 
 apple:  $(OBJ)
-		/usr/bin/arch -x86_64 gcc $(SRC) -o $(NAME) -I../includes $(CFLAGS) $(CSFML)
+		/usr/bin/arch -x86_64 gcc -v $(SRC) -o $(NAME) -I../includes $(CFLAGS) $(CSFML)
 
 clean:
 	rm -f $(OBJ)
