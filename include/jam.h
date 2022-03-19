@@ -32,4 +32,6 @@ int check_start_button(main_menu window);
 
 main_menu settings_button(main_menu window);
 
+int check_settings_button(main_menu window);
+
 #endif /* !JAM_H_ */

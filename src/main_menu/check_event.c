@@ -11,6 +11,8 @@ void analyze_event(int event)
 {
     if (event == 1) {}
         //start_game
+    if (event == 2)
+        settings_menu();
 }
 
 void check_event(main_menu win, int *event)
@@ -20,5 +22,7 @@ void check_event(main_menu win, int *event)
             sfRenderWindow_close(win.window);
         if (check_start_button(win) == true)
             *event = 1;
+        if (check_settings_button(win) == true)
+            *event = 2;
     }
 }

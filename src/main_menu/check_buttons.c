@@ -17,3 +17,14 @@ int check_start_button(main_menu window)
             return true;
     return false;
 }
+
+int check_settings_button(main_menu window)
+{
+    sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(window.window);
+    sfBool event = sfMouse_isButtonPressed(sfMouseLeft);
+
+    if (event == sfTrue && mouse_pos.y >= 575)
+        if (mouse_pos.y <= 650 && mouse_pos.x >= 185 && mouse_pos.x <= 640)
+            return true;
+    return false;
+}
