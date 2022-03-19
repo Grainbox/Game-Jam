@@ -14,7 +14,8 @@
 
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
-    
+    #include <SFML/Audio.h>
+
     #include <stdio.h>
     #include <stdlib.h>
     #include <stdbool.h>
@@ -43,5 +44,24 @@ int check_settings_button(main_menu window);
 main_menu exit_button(main_menu window);
 
 int check_exit_button(main_menu window);
+
+void init_window(int w, int h, int other, all *opti);
+
+void init_song(all *opti);
+
+void init_img(all *opti);
+
+void define_back_img(all *opti);
+
+void define_play_song(all *opti);
+
+void define_front_img(all *opti);
+
+void change_level_son(all *opti);
+
+void button_song(all *opti);
+
+void check_pos(all *opti);
+
 
 #endif /* !JAM_H_ */

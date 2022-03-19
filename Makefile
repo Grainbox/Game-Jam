@@ -11,6 +11,9 @@ SRC	=	./src/main.c									\
 		./src/main_menu/check_buttons.c					\
 		./src/main_menu/sprite_process.c 				\
 		./src/settings_menu/settings.c					\
+		./src/settings_menu/init.c						\
+		./src/settings_menu/define.c					\
+		./src/settings_menu/button.c					\
 
 OBJ = $(SRC:.c=.o)
 
@@ -18,7 +21,7 @@ NAME = keeper
 
 CFLAGS	+= -Wall -Wextra -W -I include -g
 
-CSFML	=	-lcsfml-graphics -lcsfml-window -lcsfml-system
+CSFML	=	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-Audio 
 
 all:	$(NAME)
 

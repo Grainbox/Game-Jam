@@ -11,6 +11,7 @@
     #include "jam.h"
     #include <unistd.h>
     #include <SFML/Graphics.h>
+    #include <SFML/Audio/Music.h>
 
 struct main_menu {
     sfVideoMode mode;
@@ -42,9 +43,16 @@ struct image {
 };
 typedef struct image image;
 
+struct musique {
+    sfMusic *music;
+    int level;
+};
+typedef struct musique musique;
+
 struct setting_menu {
     window_init window;
     image *img;
+    musique msc;
 };
 typedef struct setting_menu setting_menu;
 

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "audio.h": "c",
+        "music.h": "c",
+        "button.C": "cpp"
+    }
+}
