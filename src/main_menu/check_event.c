@@ -26,5 +26,7 @@ void check_event(main_menu win, int *event)
             *event = 1;
         if (check_settings_button(win) == true)
             *event = 2;
+        if (check_exit_button(win) == true)
+            *event = 3;
     }
 }

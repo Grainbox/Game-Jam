@@ -18,6 +18,7 @@ main_menu create_window(void)
 
     screen = start_button(screen);
     screen = settings_button(screen);
+    screen = exit_button(screen);
     sfRenderWindow_setFramerateLimit(screen.window, 60);
     return screen;
 }
@@ -28,6 +29,7 @@ void write_window(main_menu window)
     sfRenderWindow_clear(window.window, sfBlack);
     sfRenderWindow_drawSprite(window.window, window.sprite1, NULL);
     sfRenderWindow_drawSprite(window.window, window.sprite2, NULL);
+    sfRenderWindow_drawSprite(window.window, window.sprite3, NULL);
     sfRenderWindow_display(window.window);
 }
 
