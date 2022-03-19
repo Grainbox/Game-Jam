@@ -42,6 +42,7 @@ clean:
 	rm -f *~
 	rm -f vgcore*
 	rm -dr -f keeper.dSYM
+	rm -dr -f .vscode
 
 fclean: clean
 	make fclean -C lib/my/
