@@ -18,6 +18,8 @@
 
     #define SCALE 800, 1010, 60
 
+    #define TITLE "Donovan The Building Keeper"
+
 int open_main_menu(void);
 
 void settings_menu(void);

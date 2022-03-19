@@ -11,7 +11,7 @@
 main_menu create_window(void)
 {
     sfVideoMode m = { SCALE };
-    char t[] = "Donovan The Building Keeper";
+    char t[] = TITLE;
     sfRenderWindow *w = sfRenderWindow_create(m, t, sfResize | sfClose, NULL);
     sfEvent event;
     main_menu screen = {m, w, event, NULL, NULL, NULL, NULL};
