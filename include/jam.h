@@ -49,4 +49,10 @@ void check_game_event(window win, int *event);
 
 void open_game_window(void);
 
+void display_sprites(void);
+
+window break_background(window window);
+
+int display_break(window *window);
+
 #endif /* !JAM_H_ */

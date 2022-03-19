@@ -13,7 +13,8 @@ SRC	=	./src/main.c									\
 		./src/settings_menu/settings.c					\
 		./src/game/check_event.c						\
 		./src/game/game_window.c						\
-		./src/game/sprite_process.c							\
+		./src/game/sprite_process.c						\
+		./src/pause_menu/display_break.c				\
 
 OBJ = $(SRC:.c=.o)
 
