@@ -25,6 +25,18 @@
 
     #define TITLE "Donovan The Building Keeper"
 
+    #define WINDOW opti.settings.window.window
+
+    #define MSC_LV opti->settings.msc.level
+
+    #define CREA_FILE sfTexture_createFromFile
+
+    #define GET_P sfMouse_getPosition
+
+    #define SET_P sfSprite_setPosition
+
+     #define SET_T sfSprite_setTexture
+
 void open_main_menu(void);
 
 void settings_menu(void);

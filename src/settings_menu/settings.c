@@ -15,16 +15,16 @@ void settings_menu(void)
     init_img(&opti);
     init_song(&opti);
     sfMusic_play(opti.settings.msc.music);
-    while (sfRenderWindow_isOpen(opti.settings.window.window))
+    while (sfRenderWindow_isOpen(WINDOW))
     {
-        while (sfRenderWindow_pollEvent(opti.settings.window.window, &opti.settings.window.event)) {
+        while (sfRenderWindow_pollEvent(WINDOW, &opti.settings.window.event)) {
             if (opti.settings.window.event.type == sfEvtClosed)
-                sfRenderWindow_close(opti.settings.window.window);
+                sfRenderWindow_close(WINDOW);
         }
-        sfRenderWindow_clear(opti.settings.window.window, sfWhite);
-        sfRenderWindow_drawSprite(opti.settings.window.window, opti.settings.img[1].sprite, NULL);
-        sfRenderWindow_drawSprite(opti.settings.window.window, opti.settings.img[0].sprite, NULL);
+        sfRenderWindow_clear(WINDOW, sfWhite);
+        sfRenderWindow_drawSprite(WINDOW, opti.settings.img[1].sprite, NULL);
+        sfRenderWindow_drawSprite(WINDOW, opti.settings.img[0].sprite, NULL);
         check_pos(&opti);
-        sfRenderWindow_display(opti.settings.window.window);
+        sfRenderWindow_display(WINDOW);
     }
 }
