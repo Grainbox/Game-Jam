@@ -54,3 +54,18 @@ window start_button(window window)
     window.sprite1 = sprite;
     return window;
 }
+
+window background_main(window window)
+{
+    sfTexture *texture = NULL;
+    sfSprite *sprite = sfSprite_create();
+    sfVector2f scale = {1, 1};
+    sfVector2f pos = { 0, 0 };
+
+    texture = sfTexture_createFromFile("./content/font_settings.png", NULL);
+    sfSprite_setTexture(sprite, texture, sfTrue);
+    sfSprite_setScale(sprite, scale);
+    sfSprite_setPosition(sprite, pos);
+    window.sprite8 = sprite;
+    return window;
+}

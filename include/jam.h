@@ -93,5 +93,7 @@ void button_back(GLOBAL);
 
 void init(GLOBAL);
 
+window background_main(window window);
+
 
 #endif /* !JAM_H_ */
