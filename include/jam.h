@@ -61,15 +61,15 @@ int check_exit_button(window window);
 
 window game_background(window window);
 
-void check_game_event(window win, int *event);
+void check_game_event(GLOBAL, int *event);
 
-void open_game_window(void);
+void open_game_window(GLOBAL);
 
 void display_sprites(void);
 
-window break_background(window window);
+void break_background(GLOBAL);
 
-int display_break(window *window);
+int display_break(all opti);
 
 void init_window(int w, int h, int other, GLOBAL);
 
@@ -93,9 +93,16 @@ void button_back(GLOBAL);
 
 void init(GLOBAL);
 
-window background_main(window window);
+void create_setting_button(GLOBAL);
+
+void create_exit_button(GLOBAL);
+
+void create_resume_button(GLOBAL);
 
 void define_background(all *opti);
 
+void buttons_pause(GLOBAL, int *playing, sfVector2i pos_pause);
+
+window background_main(window window);
 
 #endif /* !JAM_H_ */

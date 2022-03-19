@@ -31,6 +31,7 @@ typedef struct window window;
 // structure global
 struct all {
     setting_menu settings;
+    struct window game;
 };
 typedef struct all all;
 

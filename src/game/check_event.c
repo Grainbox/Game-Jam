@@ -7,13 +7,13 @@
 
 #include "jam.h"
 
-void check_game_event(window win, int *event)
+void check_game_event(GLOBAL, int *event)
 {
-    while (sfRenderWindow_pollEvent(win.window, &win.event)) {
-        if (win.event.type == sfEvtClosed)
-            sfRenderWindow_close(win.window);
+    while (sfRenderWindow_pollEvent(opti->game.window, &opti->game.event)) {
+        if (opti->game.event.type == sfEvtClosed)
+            sfRenderWindow_close(opti->game.window);
         if (sfKeyboard_isKeyPressed(sfKeyEscape) == sfTrue)
-            if (display_break(&win) == 1)
+            if (display_break(*opti) == 1)
                 *event = 1;
     }
 }

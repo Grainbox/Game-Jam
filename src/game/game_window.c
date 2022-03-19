@@ -16,7 +16,6 @@ static window create_window(void)
     window screen = {m, w, event, NULL, NULL, NULL, NULL, NULL, 0};
 
     screen = game_background(screen);
-    screen = break_background(screen);
     sfRenderWindow_setFramerateLimit(screen.window, 60);
     return screen;
 }
@@ -28,13 +27,14 @@ static void write_window(window window)
     sfRenderWindow_display(window.window);
 }
 
-void open_game_window(void)
+void open_game_window(GLOBAL)
 {
     window window = create_window();
     int event = 0;
 
+    opti->game = window;
     while (sfRenderWindow_isOpen(window.window)) {
-        check_game_event(window, &event);
+        check_game_event(opti, &event);
         write_window(window);
         if (event == 1)
             break;
