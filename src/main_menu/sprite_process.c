@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2022
+** Tom Daniel, 2022
 ** Game-Jam
 ** File description:
 ** sprite_process
