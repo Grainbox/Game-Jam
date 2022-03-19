@@ -33,6 +33,7 @@ clean:
 	rm -f $(OBJ)
 	rm -f *~
 	rm -f vgcore*
+	rm -dr -f keeper.dSYM
 
 fclean: clean
 	make fclean -C lib/my/
