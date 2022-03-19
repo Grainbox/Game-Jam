@@ -81,5 +81,7 @@ void button_song(all *opti);
 
 void check_pos(all *opti);
 
+void button_back(all *opti);
+
 
 #endif /* !JAM_H_ */

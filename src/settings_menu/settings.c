@@ -24,6 +24,7 @@ void settings_menu(void)
         sfRenderWindow_clear(WINDOW, sfWhite);
         sfRenderWindow_drawSprite(WINDOW, opti.settings.img[1].sprite, NULL);
         sfRenderWindow_drawSprite(WINDOW, opti.settings.img[0].sprite, NULL);
+        sfRenderWindow_drawSprite(WINDOW, opti.settings.img[3].sprite, NULL);
         check_pos(&opti);
         sfRenderWindow_display(WINDOW);
     }

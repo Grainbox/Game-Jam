@@ -20,6 +20,19 @@ void define_back_img(all *opti)
     SET_T(opti->settings.img[0].sprite, opti->settings.img[0].texture, sfTrue);
 }
 
+void button_back(all *opti)
+{
+    int x = 50;
+    int y = 900;
+    sfVector2f size = {3 ,3};
+    sfVector2f pos = {x, y};
+    opti->settings.img[3].sprite = sfSprite_create();
+    SET_P(opti->settings.img[3].sprite, pos);
+    sfSprite_setScale(opti->settings.img[3].sprite, size);
+    opti->settings.img[3].texture = CREA_FILE("./content/back-button.png", NULL);
+    SET_T(opti->settings.img[3].sprite, opti->settings.img[3].texture, sfTrue);
+}
+
 void define_play_song(all *opti)
 {
     int x = 500;
