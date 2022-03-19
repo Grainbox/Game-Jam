@@ -19,7 +19,6 @@ void display_buttons(all opti)
 int display_break(all opti)
 {
     int playing = 0;
-    sfVector2i pos_pause = sfMouse_getPositionRenderWindow(opti.game.window);
 
     break_background(&opti);
     create_setting_button(&opti);
@@ -31,7 +30,9 @@ int display_break(all opti)
             return 1;
         display_buttons(opti);
         if (sfMouse_isButtonPressed(sfMouseLeft) == sfTrue)
-            buttons_pause(&opti, &playing, pos_pause);
+            buttons_pause(&opti, &playing);
     }
+    if (playing == 2)
+        return 1;
     return 0;
 }

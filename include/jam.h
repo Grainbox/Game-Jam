@@ -99,7 +99,7 @@ void create_exit_button(GLOBAL);
 
 void create_resume_button(GLOBAL);
 
-void buttons_pause(GLOBAL, int *playing, sfVector2i pos_pause);
+void buttons_pause(GLOBAL, int *playing);
 
 window background_main(window window);
 
