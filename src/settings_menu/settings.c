@@ -18,8 +18,6 @@ void settings_menu(void)
 {
     all opti;
     init_window(SCALE, &opti);
-    sfTexture* texture;
-    sfSprite* sprite;
     while (sfRenderWindow_isOpen(opti.settings.window.window))
     {
         while (sfRenderWindow_pollEvent(opti.settings.window.window, &opti.settings.window.event)) {
