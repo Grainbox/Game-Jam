@@ -36,10 +36,10 @@ void button_back_content(all *opti)
                 sfRenderWindow_destroy(opti->settings.window.window);
                 sfMusic_stop(opti->settings.msc.music);
                 open_main_menu(opti);
-            }    
+            }
         }
     }
-} 
+}
 
 void check_pos(all *opti)
 {

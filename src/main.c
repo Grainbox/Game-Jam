@@ -8,8 +8,8 @@
 #include "jam.h"
 
 int main(void)
-{   
-    all *opti;
+{
+    all opti;
     init(&opti);
     // settings_menu(&opti);
     open_main_menu(&opti);
