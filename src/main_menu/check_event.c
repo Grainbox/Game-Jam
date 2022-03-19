@@ -10,7 +10,7 @@
 // analyze received event
 void analyze_event(int event)
 {
-    if (event == 1) {}
+    if (event == 1)
         open_game_window();
     if (event == 2)
         settings_menu();

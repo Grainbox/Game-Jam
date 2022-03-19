@@ -13,9 +13,8 @@ int display_break(window *window)
 
     while (playing == 0) {
         if (sfRenderWindow_pollEvent(window->window, &window->event) == sfTrue &&
-            window->event.type == sfEvtClosed) {
+            window->event.type == sfEvtClosed)
             return 1;
-        }
         sfRenderWindow_drawSprite(window->window, window->sprite2, NULL);
         sfRenderWindow_display(window->window);
         // sfRenderWindow_drawSprite(window->window, button_return, NULL);
