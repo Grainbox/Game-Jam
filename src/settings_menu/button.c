@@ -24,7 +24,7 @@ void button_song(all *opti)
             }
         }
     }
-} 
+}
 
 void check_pos(all *opti)
 {
