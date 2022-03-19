@@ -24,7 +24,7 @@ void button_song(all *opti)
             }
         }
     }
-} 
+}
 
 void button_back_content(all *opti)
 {
