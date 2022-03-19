@@ -24,6 +24,7 @@ struct window {
     sfSprite *sprite3;
     sfSprite *sprite4;
     sfSprite *sprite5;
+    sfSprite *sprite8;
 };
 typedef struct window window;
 

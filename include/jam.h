@@ -101,4 +101,6 @@ void create_resume_button(GLOBAL);
 
 void buttons_pause(GLOBAL, int *playing, sfVector2i pos_pause);
 
+window background_main(window window);
+
 #endif /* !JAM_H_ */
