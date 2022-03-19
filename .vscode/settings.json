@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "audio.h": "c",
+        "music.h": "c",
+        "button.C": "cpp",
+        "unistd.h": "c",
+        "stdbool.h": "c"
+    }
+}

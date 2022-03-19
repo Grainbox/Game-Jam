@@ -14,7 +14,9 @@
 
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
+    #include <SFML/Audio.h>
 
+    #include <stdio.h>
     #include <stdlib.h>
     #include <stdbool.h>
     #include <unistd.h>
@@ -22,6 +24,18 @@
     #define SCALE 800, 1010, 60
 
     #define TITLE "Donovan The Building Keeper"
+
+    #define WINDOW opti.settings.window.window
+
+    #define MSC_LV opti->settings.msc.level
+
+    #define CREA_FILE sfTexture_createFromFile
+
+    #define GET_P sfMouse_getPosition
+
+    #define SET_P sfSprite_setPosition
+
+     #define SET_T sfSprite_setTexture
 
 void open_main_menu(void);
 
@@ -54,5 +68,24 @@ void display_sprites(void);
 window break_background(window window);
 
 int display_break(window *window);
+
+void init_window(int w, int h, int other, all *opti);
+
+void init_song(all *opti);
+
+void init_img(all *opti);
+
+void define_back_img(all *opti);
+
+void define_play_song(all *opti);
+
+void define_front_img(all *opti);
+
+void change_level_son(all *opti);
+
+void button_song(all *opti);
+
+void check_pos(all *opti);
+
 
 #endif /* !JAM_H_ */
