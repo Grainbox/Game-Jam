@@ -9,7 +9,7 @@
     #define JAM_STRUCT_H_
 
     #include "jam.h"
-
+    #include <unistd.h>
     #include <SFML/Graphics.h>
 
 struct main_menu {
@@ -23,6 +23,8 @@ struct main_menu {
 };
 typedef struct main_menu main_menu;
 
+// settings ::::::::::::::::::::::
+
 struct window_init {
     sfRenderWindow* window;
     sfEvent event;
@@ -33,6 +35,9 @@ struct setting_menu {
     window_init window;
 };
 typedef struct setting_menu setting_menu;
+
+
+// :::::::::::::::::::::::::::::::::
 
 struct all {
     setting_menu settings;

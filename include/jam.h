@@ -13,6 +13,7 @@
     #include "jam_struct.h"
 
     #include <SFML/Graphics.h>
+    #include <SFML/System.h>
 
     #define SCALE 800, 1010, 60
 

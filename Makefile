@@ -5,17 +5,13 @@
 ## Makefile
 ##
 
-SRC	=	src/main.c
+SRC	=	./src/main.c									\
+		./src/main_menu/main_window.c					\
+		./src/main_menu/check_event.c					\
+		./src/main_menu/sprite_process.c 				\
+		./src/settings_menu/settings.c					\
 
-MAIN_MENU	=	src/main_menu/main_window.c	\
-				src/main_menu/check_event.c	\
-				src/main_menu/sprite_process.c
-
-SETTINGS_MENU	=	src/settings_menu/settings.c
-
-FINAL_SRC	=	$(SRC)	$(MAIN_MENU)	$(SETTINGS_MENU)
-
-OBJ = $(FINAL_SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 NAME = keeper
 

@@ -9,7 +9,7 @@
 
 int main(void)
 {
-    // main_menu();
+    // open_main_menu();
     settings_menu();
     return OK;
 }

@@ -7,6 +7,7 @@
 
 #include "jam.h"
 
+// initialise la window
 void init_window(int w, int h, int other, all *opti)
 {
     sfVideoMode mode = {w, h, other};
