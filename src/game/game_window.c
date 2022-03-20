@@ -34,12 +34,12 @@ void create_player(GLOBAL)
     int y = 845;
     sfVector2f size = {3 ,3};
     sfVector2f pos = {x, y};
+
     PLAYER.sprite = sfSprite_create();
     SET_P(PLAYER.sprite, pos);
     sfSprite_setScale(PLAYER.sprite, size);
     PLAYER.texture = CREA_FILE("./content/sprt_player.png", NULL);
     SET_T(PLAYER.sprite, PLAYER.texture, sfTrue);
-    printf("player.init\n");
     PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
     sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
 }

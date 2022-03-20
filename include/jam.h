@@ -107,4 +107,12 @@ void buttons_pause(GLOBAL, int *playing);
 
 window background_main(window window);
 
+window credit_back_button(window window);
+
+void check_credit_event(window window, int *event);
+
+void open_credits(GLOBAL);
+
+window credit_background(window window);
+
 #endif /* !JAM_H_ */
