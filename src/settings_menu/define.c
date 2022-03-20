@@ -87,8 +87,8 @@ void define_background(all *opti)
 
 void button_credit(all *opti)
 {
-    int x = 75;
-    int y = 980;
+    int x = 225;
+    int y = 600;
     sfVector2f size = {8 ,8};
     sfVector2f pos = {x, y};
     opti->settings.img[5].sprite = sfSprite_create();

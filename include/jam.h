@@ -120,4 +120,6 @@ window credit_background(window window);
 
 void create_sprite_player(GLOBAL);
 
+void button_credit(all *opti);
+
 #endif /* !JAM_H_ */
