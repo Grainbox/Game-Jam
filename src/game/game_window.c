@@ -37,12 +37,12 @@ void open_game_window(GLOBAL)
     create_sprite_player(opti);
     sfMusic_play(opti->settings.msc.music);
     int event = 0;
-
+    
     opti->game = window;
     while (sfRenderWindow_isOpen(window.window)) {
         check_game_event(opti, &event);
         write_window(window, opti);
-        event_player(opti, window, &event);
+        event_player(opti);
         if (event == 1)
             break;
     }

@@ -28,7 +28,7 @@ void move_rect_less(sfIntRect *rect, int offset, int max_value)
         rect->left = 22;
 }
 
-void event_player(GLOBAL, window window, sfEvent *event)
+void event_player(GLOBAL)
 {
     if (sfKeyboard_isKeyPressed(sfKeyLeft)) {
         printf("%d, %d\n", PLAYER.x, PLAYER.y);
