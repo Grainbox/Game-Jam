@@ -58,7 +58,6 @@ void button_credits(all *opti)
 void check_pos(all *opti)
 {
     sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
-    // printf("x = %d y = %d\n", mouse_pos.x, mouse_pos.y);
     button_song(opti);
     button_back_content(opti);
     button_credits(opti);
