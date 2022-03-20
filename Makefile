@@ -15,6 +15,8 @@ SRC	=	./src/main.c									\
 		./src/settings_menu/define.c					\
 		./src/settings_menu/button.c					\
 		./src/game/check_event.c						\
+		./src/game/time.c								\
+		./src/game/movement.c							\
 		./src/game/game_window.c						\
 		./src/game/sprite_process.c						\
 		./src/pause_menu/display_break.c				\

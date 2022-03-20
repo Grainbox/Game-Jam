@@ -122,4 +122,14 @@ void create_sprite_player(GLOBAL);
 
 void button_credit(all *opti);
 
+void event_player(GLOBAL, window window, sfEvent *event);
+
+void move_rect_less(sfIntRect *rect, int offset, int max_value);
+
+void creat_song(GLOBAL);
+
+void move_rect(sfIntRect *rect, int offset, int max_value);
+
+int temps (float i);
+
 #endif /* !JAM_H_ */
