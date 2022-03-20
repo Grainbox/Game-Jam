@@ -66,7 +66,7 @@ void event_player(GLOBAL, window window, sfEvent *event)
         if (sfKeyboard_isKeyPressed(sfKeyUp)) {
             printf("Up\n");
             int y = PLAYER.y;
-            if (PLAYER.y == 840) {
+            if (PLAYER.y == 835) {
                 y = PLAYER.y = 700;
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
@@ -91,7 +91,43 @@ void event_player(GLOBAL, window window, sfEvent *event)
                 sfSprite_setPosition(PLAYER.sprite, pos);
             }
             if (PLAYER.y == 370 && PLAYER.x > 330) {
-                y = PLAYER.y = 260;
+                y = PLAYER.y = 263;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+        }
+
+        // down
+        if (sfKeyboard_isKeyPressed(sfKeyDown)) {
+            printf("down\n");
+            int y = PLAYER.y;
+            if (PLAYER.y == 700) {
+                y = PLAYER.y = 835;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 590 && PLAYER.x > 330) {
+                y = PLAYER.y = 700;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 480 && PLAYER.x > 330) {
+                y = PLAYER.y = 590;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 370 && PLAYER.x > 330) {
+                y = PLAYER.y = 480;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 263 && PLAYER.x > 330) {
+                y = PLAYER.y = 370;
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);

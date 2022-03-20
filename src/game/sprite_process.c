@@ -25,7 +25,7 @@ window game_background(window window)
 void create_sprite_player(GLOBAL)
 {
     int x = PLAYER.x = 150;
-    int y = PLAYER.y = 840;
+    int y = PLAYER.y = 835;
     sfVector2f size = {3 ,3};
     sfVector2f pos = {x, y};
     PLAYER.sprite = sfSprite_create();
