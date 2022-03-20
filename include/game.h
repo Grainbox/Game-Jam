@@ -22,8 +22,15 @@ struct joueur {
 };
 typedef struct joueur joueur;
 
+struct musics {
+    sfMusic *music;
+    int level;
+};
+typedef struct musics musics;
+
 struct menu_jeu {
     joueur player;
+    musics *music;
 };
 typedef struct menu_jeu menu_jeu;
 
