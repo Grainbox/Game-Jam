@@ -45,9 +45,10 @@ void button_credits(all *opti)
 {
     sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
     sfBool click = sfMouse_isButtonPressed(sfMouseLeft);
-    if (mouse_pos.x >= 1 && mouse_pos.x <= 1) {
-        if (mouse_pos.y >= 1 && mouse_pos.y <= 1) {
+    if (mouse_pos.x >= 228 && mouse_pos.x <= 601) {
+        if (mouse_pos.y >= 612 && mouse_pos.y <= 680) {
             if (click == sfTrue) {
+                sfRenderWindow_close((const sfWindow *)opti->settings.window.window);
                 open_credits(opti);
             }
         }
@@ -57,6 +58,8 @@ void button_credits(all *opti)
 void check_pos(all *opti)
 {
     sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
+    // printf("x = %d y = %d\n", mouse_pos.x, mouse_pos.y);
     button_song(opti);
     button_back_content(opti);
+    button_credits(opti);
 }
