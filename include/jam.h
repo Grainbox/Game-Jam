@@ -15,11 +15,14 @@
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
     #include <SFML/Audio.h>
+    #include <SFML/System/Clock.h>
 
     #include <stdio.h>
     #include <stdlib.h>
     #include <stdbool.h>
     #include <unistd.h>
+
+    #include <time.h>
 
     #define SCALE 800, 1010, 60
 
@@ -106,5 +109,7 @@ void define_background(all *opti);
 void buttons_pause(GLOBAL, int *playing);
 
 window background_main(window window);
+
+void create_player(GLOBAL);
 
 #endif /* !JAM_H_ */
