@@ -33,9 +33,10 @@ void event_player(GLOBAL, window window, sfEvent *event)
     if (sfKeyboard_isKeyPressed(sfKeyLeft)) {
         printf("%d, %d\n", PLAYER.x, PLAYER.y);
         int x = PLAYER.x;
-        if (PLAYER.x >= 78) {
+        if (PLAYER.x >= 78)
             x = PLAYER.x -= 6;
-        }
+        else
+            sfMusic_play(sfMusic_createFromFile("./content/no.wav"));
         int y = PLAYER.y;
         sfVector2f pos = {x, y};
         move_rect_less(&PLAYER.rect, 11, 0);
@@ -48,9 +49,10 @@ void event_player(GLOBAL, window window, sfEvent *event)
         move_rect(&PLAYER.rect, 11, 66);
 
         int x = PLAYER.x;
-        if (PLAYER.x <= 702) {
+        if (PLAYER.x <= 702)
             x = PLAYER.x += 6;
-        }
+        else
+            sfMusic_play(sfMusic_createFromFile("./content/no.wav"));
         int y = PLAYER.y;
         sfVector2f pos = {x, y};
 
