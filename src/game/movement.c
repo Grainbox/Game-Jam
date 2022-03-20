@@ -61,6 +61,43 @@ void event_player(GLOBAL, window window, sfEvent *event)
         PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
         sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
     }
+
+    if (PLAYER.x >= 336 && PLAYER.x <= 390) {
+        if (sfKeyboard_isKeyPressed(sfKeyUp)) {
+            printf("Up\n");
+            int y = PLAYER.y;
+            if (PLAYER.y == 840) {
+                y = PLAYER.y = 700;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 700 && PLAYER.x > 330) {
+                y = PLAYER.y = 590;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 590 && PLAYER.x > 330) {
+                y = PLAYER.y = 480;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 480 && PLAYER.x > 330) {
+                y = PLAYER.y = 370;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+            if (PLAYER.y == 370 && PLAYER.x > 330) {
+                y = PLAYER.y = 260;
+                int x = PLAYER.x = 330;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
+        }
+    }
     temps(0.05);
 }
 
