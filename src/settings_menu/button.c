@@ -49,6 +49,7 @@ void button_credits(all *opti)
         if (mouse_pos.y >= 612 && mouse_pos.y <= 680) {
             if (click == sfTrue) {
                 sfRenderWindow_close((const sfWindow *)opti->settings.window.window);
+                sfMusic_stop(opti->settings.msc.music);
                 open_credits(opti);
             }
         }
