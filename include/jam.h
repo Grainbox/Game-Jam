@@ -110,6 +110,14 @@ void buttons_pause(GLOBAL, int *playing);
 
 window background_main(window window);
 
-void create_player(GLOBAL);
+window credit_back_button(window window);
+
+void check_credit_event(window window, int *event);
+
+void open_credits(GLOBAL);
+
+window credit_background(window window);
+
+void create_sprite_player(GLOBAL);
 
 #endif /* !JAM_H_ */

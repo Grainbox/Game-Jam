@@ -107,8 +107,8 @@ void event_player(GLOBAL, window window, sfEvent *event)
 void open_game_window(GLOBAL)
 {
     window window = create_window();
-    create_player(opti);
     creat_song(opti);
+    create_sprite_player(opti);
     int event = 0;
 
     opti->game = window;

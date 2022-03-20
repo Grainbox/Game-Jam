@@ -21,6 +21,9 @@ SRC	=	./src/main.c									\
 		./src/init.c 									\
 		./src/pause_menu/sprite_process.c				\
 		./src/pause_menu/pause_buttons.c				\
+		./src/credits/check_events.c					\
+		./src/credits/credit_window.c					\
+		./src/credits/sprite_process.c					\
 
 OBJ = $(SRC:.c=.o)
 

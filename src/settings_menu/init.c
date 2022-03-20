@@ -23,7 +23,7 @@ void init_song(all *opti)
 
 void init_img(all *opti)
 {
-    opti->settings.img = malloc(sizeof(opti->settings.img) * 30);
+    opti->settings.img = malloc(sizeof(opti->settings.img) * 50);
     define_background(opti);
     define_back_img(opti);
     define_front_img(opti);

@@ -22,7 +22,7 @@ window game_background(window window)
     return window;
 }
 
-void create_player(GLOBAL)
+void create_sprite_player(GLOBAL)
 {
     int x = PLAYER.x = 150;
     int y = PLAYER.y = 845;

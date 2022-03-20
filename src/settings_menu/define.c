@@ -84,3 +84,16 @@ void define_background(all *opti)
     opti->settings.img[i].texture = CREA_FILE("./content/font_settings.png", NULL);
     SET_T(opti->settings.img[i].sprite, opti->settings.img[i].texture, sfTrue);
 }
+
+void button_credit(all *opti)
+{
+    int x = 75;
+    int y = 980;
+    sfVector2f size = {8 ,8};
+    sfVector2f pos = {x, y};
+    opti->settings.img[5].sprite = sfSprite_create();
+    SET_P(opti->settings.img[5].sprite, pos);
+    sfSprite_setScale(opti->settings.img[5].sprite, size);
+    opti->settings.img[5].texture = CREA_FILE("./content/credits-button.png", NULL);
+    SET_T(opti->settings.img[5].sprite, opti->settings.img[5].texture, sfTrue);
+}

@@ -10,8 +10,8 @@
 int main(void)
 {
     all opti;
+
     init(&opti);
-    // settings_menu(&opti);
     open_main_menu(&opti);
     return OK;
 }
