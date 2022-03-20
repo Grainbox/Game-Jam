@@ -14,6 +14,7 @@
     #include <SFML/Audio/Music.h>
 
     #include "settings_struct.h"
+    #include "game.h"
 
 struct window {
     sfVideoMode mode;
@@ -31,7 +32,8 @@ typedef struct window window;
 // structure global
 struct all {
     setting_menu settings;
-    struct window game;
+    struct window game; // degage cette merde
+    menu_jeu game_struct;
 };
 typedef struct all all;
 

@@ -39,6 +39,8 @@
 
     #define GLOBAL all *opti
 
+    #define PLAYER opti->game_struct.player
+
 void open_main_menu(GLOBAL);
 
 void settings_menu(GLOBAL);
