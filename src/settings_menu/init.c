@@ -17,7 +17,7 @@ void init_window(int w, int h, int other, all *opti)
 void init_song(all *opti)
 {
     opti->settings.msc.level = 50;
-    opti->settings.msc.music = sfMusic_createFromFile("./content/street_fighter.ogg");
+    opti->settings.msc.music = sfMusic_createFromFile("./content/music.ogg");
     sfMusic_setVolume(opti->settings.msc.music, opti->settings.msc.level);
 }
 
