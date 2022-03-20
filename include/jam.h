@@ -124,7 +124,7 @@ void create_sprite_player(GLOBAL);
 
 void button_credit(all *opti);
 
-void event_player(GLOBAL, window window, sfEvent *event);
+void event_player(GLOBAL);
 
 void move_rect_less(sfIntRect *rect, int offset, int max_value);
 

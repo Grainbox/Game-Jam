@@ -50,7 +50,7 @@ void button_credits(all *opti)
     if (mouse_pos.x >= 228 && mouse_pos.x <= 601) {
         if (mouse_pos.y >= 612 && mouse_pos.y <= 680) {
             if (click == sfTrue) {
-                sfRenderWindow_close((const sfWindow *)opti->settings.window.window);
+                sfRenderWindow_close(opti->settings.window.window);
                 sfMusic_stop(opti->settings.msc.music);
                 open_credits(opti);
             }
@@ -60,7 +60,6 @@ void button_credits(all *opti)
 
 void check_pos(all *opti, int playing)
 {
-    sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
     button_song(opti);
     button_back_content(opti, playing);
     button_credits(opti);
