@@ -44,9 +44,11 @@
 
     #define PLAYER opti->game_struct.player
 
+    #define NEIGHBOOR opti->game_struct.neigh
+
 void open_main_menu(GLOBAL);
 
-void settings_menu(GLOBAL);
+void settings_menu(GLOBAL, int playing);
 
 void check_main_event(window win, int *event);
 
@@ -92,7 +94,7 @@ void change_level_son(GLOBAL);
 
 void button_song(GLOBAL);
 
-void check_pos(GLOBAL);
+void check_pos(all *opti, int playing);
 
 void button_back(GLOBAL);
 
@@ -131,5 +133,23 @@ void creat_song(GLOBAL);
 void move_rect(sfIntRect *rect, int offset, int max_value);
 
 int temps (float i);
+
+void create_neigh_1(GLOBAL);
+
+void create_neigh_2(GLOBAL);
+
+void create_neigh_3(GLOBAL);
+
+void create_neigh_4(GLOBAL);
+
+void create_neigh_5(GLOBAL);
+
+void create_neigh_6(GLOBAL);
+
+void create_neigh_7(GLOBAL);
+
+void create_neigh_8(GLOBAL);
+
+void create_neigh_9(GLOBAL);
 
 #endif /* !JAM_H_ */

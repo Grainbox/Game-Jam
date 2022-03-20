@@ -24,8 +24,30 @@ static void write_window(window window, GLOBAL)
 {
     sfRenderWindow_clear(window.window, sfBlack);
     sfRenderWindow_drawSprite(window.window, window.sprite1, NULL);
-    sfRenderWindow_drawSprite(window.window, opti->game_struct.player.sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[0].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[1].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[2].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[3].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[4].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[5].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[6].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[7].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, NEIGHBOOR[8].sprite, NULL);
+    sfRenderWindow_drawSprite(window.window, PLAYER.sprite, NULL);
     sfRenderWindow_display(window.window);
+}
+
+void init_neigh(GLOBAL)
+{
+    create_neigh_1(opti);
+    create_neigh_2(opti);
+    create_neigh_3(opti);
+    create_neigh_4(opti);
+    create_neigh_5(opti);
+    create_neigh_6(opti);
+    create_neigh_7(opti);
+    create_neigh_8(opti);
+    create_neigh_9(opti);
 }
 
 void open_game_window(GLOBAL)
@@ -39,6 +61,8 @@ void open_game_window(GLOBAL)
     int event = 0;
 
     opti->game = window;
+    opti->game_struct.neigh = malloc(sizeof(neighbor) * 10);
+    init_neigh(opti);
     while (sfRenderWindow_isOpen(window.window)) {
         check_game_event(opti, &event);
         write_window(window, opti);
@@ -46,5 +70,6 @@ void open_game_window(GLOBAL)
         if (event == 1)
             break;
     }
+    free(NEIGHBOOR);
     sfRenderWindow_destroy(window.window);
 }

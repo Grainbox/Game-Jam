@@ -13,7 +13,7 @@ void analyze_event(int event, GLOBAL)
     if (event == 1)
         open_game_window(opti);
     if (event == 2)
-        settings_menu(opti);
+        settings_menu(opti, 0);
 }
 
 // check for any event

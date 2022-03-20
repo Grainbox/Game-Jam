@@ -15,7 +15,7 @@ void buttons_pause(GLOBAL, int *playing)
             *playing = 1;
     if (pos_pause.x >= 267 && pos_pause.x <= 537)
         if (pos_pause.y >= 294 && pos_pause.y <= 336) {
-            settings_menu(opti);
+            settings_menu(opti, 1);
             *playing = 2;
         }
     if (pos_pause.x >= 325 && pos_pause.x <= 476)

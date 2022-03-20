@@ -22,6 +22,18 @@ struct joueur {
 };
 typedef struct joueur joueur;
 
+struct neighbor {
+    sfSprite *sprite;
+    sfTexture *texture;
+    int x;
+    int y;
+    int size_x;
+    int size_y;
+    int rotate;
+    sfIntRect rect;
+};
+typedef struct neighbor neighbor;
+
 struct musics {
     sfMusic *music;
     int level;
@@ -31,6 +43,7 @@ typedef struct musics musics;
 struct menu_jeu {
     joueur player;
     musics *music;
+    neighbor *neigh;
 };
 typedef struct menu_jeu menu_jeu;
 

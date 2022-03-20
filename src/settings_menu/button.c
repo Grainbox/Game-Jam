@@ -26,7 +26,7 @@ void button_song(all *opti)
     }
 }
 
-void button_back_content(all *opti)
+void button_back_content(all *opti, int playing)
 {
     sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
     sfBool event = sfMouse_isButtonPressed(sfMouseLeft);
@@ -34,8 +34,10 @@ void button_back_content(all *opti)
         if (mouse_pos.x >= 54 && mouse_pos.x <= 296) {
             if (event == sfTrue) {
                 sfRenderWindow_destroy(opti->settings.window.window);
-                sfMusic_stop(opti->settings.msc.music);
-                open_main_menu(opti);
+                if (playing == 0) {
+                    sfMusic_stop(opti->settings.msc.music);
+                    open_main_menu(opti);
+                }
             }
         }
     }
@@ -56,10 +58,10 @@ void button_credits(all *opti)
     }
 }
 
-void check_pos(all *opti)
+void check_pos(all *opti, int playing)
 {
     sfVector2i mouse_pos = sfMouse_getPosition((const sfWindow *)opti->settings.window.window);
     button_song(opti);
-    button_back_content(opti);
+    button_back_content(opti, playing);
     button_credits(opti);
 }

@@ -42,5 +42,5 @@ void open_credits(GLOBAL)
     }
     sfRenderWindow_destroy(window.window);
     if (event == 1)
-        settings_menu(opti);
+        settings_menu(opti, 0);
 }

@@ -8,7 +8,7 @@
 #include "jam.h"
 
 // settings main_menu -> settings or Pause -> settings or reverse
-void settings_menu(all *opti)
+void settings_menu(all *opti, int playing)
 {
     init_window(SCALE, opti);
     init_img(opti);
@@ -27,6 +27,6 @@ void settings_menu(all *opti)
         sfRenderWindow_drawSprite(WINDOW, opti->settings.img[3].sprite, NULL);
         sfRenderWindow_drawSprite(WINDOW, opti->settings.img[5].sprite, NULL);
         sfRenderWindow_display(WINDOW);
-        check_pos(opti);
+        check_pos(opti, playing);
     }
 }

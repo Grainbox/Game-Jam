@@ -25,6 +25,7 @@ int display_break(all opti)
     create_exit_button(&opti);
     create_resume_button(&opti);
     while (playing == 0) {
+        sfMusic_pause(opti.settings.msc.music);
         if (sfRenderWindow_pollEvent(opti.game.window, &opti.game.event) == sfTrue &&
             opti.game.event.type == sfEvtClosed)
             return 1;
@@ -34,5 +35,6 @@ int display_break(all opti)
     }
     if (playing == 2)
         return 1;
+    sfMusic_play(opti.settings.msc.music);
     return 0;
 }
