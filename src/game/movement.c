@@ -28,6 +28,32 @@ void move_rect_less(sfIntRect *rect, int offset, int max_value)
         rect->left = 22;
 }
 
+void event_door(GLOBAL)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyDown)) {
+        printf("down\n");
+        int x = PLAYER.x;
+        int y = PLAYER.y;
+        if (PLAYER.y == 835 && PLAYER.x >= 475 && PLAYER.x <= 495) {
+            y = PLAYER.y = 928;
+            int x = PLAYER.x = 485;
+            sfVector2f pos = {x, y};
+            sfSprite_setPosition(PLAYER.sprite, pos);
+        }
+    }
+    if (sfKeyboard_isKeyPressed(sfKeyUp)) {
+        printf("up\n");
+        int x = PLAYER.x;
+        int y = PLAYER.y;
+        if (PLAYER.y == 928 && PLAYER.x >= 475 && PLAYER.x <= 495) {
+            y = PLAYER.y = 835;
+            int x = PLAYER.x = 485;
+            sfVector2f pos = {x, y};
+            sfSprite_setPosition(PLAYER.sprite, pos);
+        }
+    }
+}
+
 void event_player(GLOBAL)
 {
     if (sfKeyboard_isKeyPressed(sfKeyLeft)) {
@@ -104,7 +130,6 @@ void event_player(GLOBAL)
                 sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
         }
-
         // down
         if (sfKeyboard_isKeyPressed(sfKeyDown)) {
             printf("down\n");
@@ -144,8 +169,17 @@ void event_player(GLOBAL)
                 sfSprite_setPosition(PLAYER.sprite, pos);
                 sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
+            if (PLAYER.y == 835 && PLAYER.x == 492) {
+                printf("jsuis la pelo");
+                y = PLAYER.y = 860;
+                int x = PLAYER.x = 492;
+                sfVector2f pos = {x, y};
+                sfSprite_setPosition(PLAYER.sprite, pos);
+            }
         }
     }
+    if (PLAYER.x >= 450 && PLAYER.x <= 515)
+        event_door(opti);
     temps(0.05);
 }
 
