@@ -28,29 +28,6 @@ static void write_window(window window, GLOBAL)
     sfRenderWindow_display(window.window);
 }
 
-void create_player(GLOBAL)
-{
-    int x = 150;
-    int y = 845;
-    sfVector2f size = {3 ,3};
-    sfVector2f pos = {x, y};
-
-    PLAYER.sprite = sfSprite_create();
-    SET_P(PLAYER.sprite, pos);
-    sfSprite_setScale(PLAYER.sprite, size);
-    PLAYER.texture = CREA_FILE("./content/sprt_player.png", NULL);
-    SET_T(PLAYER.sprite, PLAYER.texture, sfTrue);
-    PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
-    sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
-}
-
-void move_rect(sfIntRect *rect, int offset, int max_value)
-{
-    rect->left += offset;
-    if (rect->left == max_value)
-        rect->left = 0;
-}
-
 int temps (float i)
 {
     sfClock *clock;
@@ -67,28 +44,55 @@ int temps (float i)
     }
 }
 
+void move_rect(sfIntRect *rect, int offset, int max_value)
+{
+    rect->left += offset;
+    if (rect->left == max_value)
+        rect->left = 44;
+}
+
 void move_rect_less(sfIntRect *rect, int offset, int max_value)
 {
     rect->left -= offset;
     if (rect->left == max_value)
-        rect->left = 0;
+        rect->left = 22;
 }
 
 void event_player(GLOBAL, window window, sfEvent *event)
 {
     if (sfKeyboard_isKeyPressed(sfKeyLeft)) {
-        printf("left\n");
+
+        printf("%d, %d\n", PLAYER.x, PLAYER.y);
+        int x = PLAYER.x;
+        if (PLAYER.x >= 78)
+            x = PLAYER.x -= 6;
+        int y = PLAYER.y;
+        sfVector2f pos = {x, y};
         move_rect_less(&PLAYER.rect, 11, 0);
+
         sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
+        sfSprite_setPosition(PLAYER.sprite, pos);
+
     } else if (sfKeyboard_isKeyPressed(sfKeyRight)) {
-        printf("Right\n");
-        move_rect(&PLAYER.rect, 11, 77);
+
+        printf("%d, %d\n", PLAYER.x, PLAYER.y);
+
+        move_rect(&PLAYER.rect, 11, 66);
+
+        int x = PLAYER.x;
+        if (PLAYER.x <= 702)
+            x = PLAYER.x += 6;
+        int y = PLAYER.y;
+        sfVector2f pos = {x, y};
+
+        sfSprite_setPosition(PLAYER.sprite, pos);
         sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
+
     } else {
         PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
         sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
     }
-    temps(0.0005);
+    temps(0.05);
 }
 
 void open_game_window(GLOBAL)
