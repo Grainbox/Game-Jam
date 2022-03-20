@@ -101,6 +101,7 @@ void event_player(GLOBAL)
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);
+                sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
         }
 
@@ -113,24 +114,28 @@ void event_player(GLOBAL)
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);
+                sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
             if (PLAYER.y == 590 && PLAYER.x > 330) {
                 y = PLAYER.y = 700;
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);
+                sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
             if (PLAYER.y == 480 && PLAYER.x > 330) {
                 y = PLAYER.y = 590;
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);
+                sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
             if (PLAYER.y == 370 && PLAYER.x > 330) {
                 y = PLAYER.y = 480;
                 int x = PLAYER.x = 330;
                 sfVector2f pos = {x, y};
                 sfSprite_setPosition(PLAYER.sprite, pos);
+                sfMusic_play(sfMusic_createFromFile("./content/ascenseur.wav"));
             }
             if (PLAYER.y == 263 && PLAYER.x > 330) {
                 y = PLAYER.y = 370;

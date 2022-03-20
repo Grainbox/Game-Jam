@@ -37,3 +37,5 @@ void create_sprite_player(GLOBAL)
     PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
     sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
 }
+
+
