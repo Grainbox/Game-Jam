@@ -15,11 +15,14 @@
     #include <SFML/Graphics.h>
     #include <SFML/System.h>
     #include <SFML/Audio.h>
+    #include <SFML/System/Clock.h>
 
     #include <stdio.h>
     #include <stdlib.h>
     #include <stdbool.h>
     #include <unistd.h>
+
+    #include <time.h>
 
     #define SCALE 800, 1010, 60
 
@@ -114,5 +117,7 @@ void check_credit_event(window window, int *event);
 void open_credits(GLOBAL);
 
 window credit_background(window window);
+
+void create_sprite_player(GLOBAL);
 
 #endif /* !JAM_H_ */

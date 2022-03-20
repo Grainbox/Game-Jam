@@ -51,15 +51,50 @@ void move_rect(sfIntRect *rect, int offset, int max_value)
         rect->left = 0;
 }
 
+int temps (float i)
+{
+    sfClock *clock;
+    sfTime time;
+    float seconds;
+    clock = sfClock_create();
+    while (1) {
+        time = sfClock_getElapsedTime(clock);
+        seconds = time.microseconds / 1000000.0;
+        if (seconds > i) {
+            return 0;
+            sfClock_restart(clock);
+        }
+    }
+}
+
+void move_rect_less(sfIntRect *rect, int offset, int max_value)
+{
+    rect->left -= offset;
+    if (rect->left == max_value)
+        rect->left = 0;
+}
+
 void event_player(GLOBAL, window window, sfEvent *event)
 {
-    
+    if (sfKeyboard_isKeyPressed(sfKeyLeft)) {
+        printf("left\n");
+        move_rect_less(&PLAYER.rect, 11, 0);
+        sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
+    } else if (sfKeyboard_isKeyPressed(sfKeyRight)) {
+        printf("Right\n");
+        move_rect(&PLAYER.rect, 11, 77);
+        sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
+    } else {
+        PLAYER.rect = (sfIntRect) {33, 0, 11, 25};
+        sfSprite_setTextureRect(PLAYER.sprite, PLAYER.rect);
+    }
+    temps(0.0005);
 }
 
 void open_game_window(GLOBAL)
 {
     window window = create_window();
-    create_player(opti);
+    create_sprite_player(opti);
     int event = 0;
 
     opti->game = window;
