@@ -32,7 +32,7 @@ void open_game_window(GLOBAL)
 {
     window window = create_window();
     creat_song(opti);
-    opti->settings.msc.music = sfMusic_createFromFile("./content/music.ogg");
+    // opti->settings.msc.music = sfMusic_createFromFile("./content/music.ogg");
     sfMusic_setVolume(opti->settings.msc.music, opti->settings.msc.level);
     create_sprite_player(opti);
     sfMusic_play(opti->settings.msc.music);
