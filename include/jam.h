@@ -26,7 +26,7 @@
 
     #define SCALE 800, 1010, 60
 
-    #define TITLE "Donovan The Building Keeper"
+    #define TITLE "The Building Keeper"
 
     #define WINDOW opti->settings.window.window
 
